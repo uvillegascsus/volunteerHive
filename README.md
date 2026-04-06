@@ -57,7 +57,7 @@ VolunteerHive is a web-based Volunteer Management System (VMS) designed for the 
 
 ### Built With
 
-
+LAMP( Linux, Apache, MySQL, Python)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
