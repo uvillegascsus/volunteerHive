@@ -1,3 +1,7 @@
+
+<img width="746" height="842" alt="image" src="https://github.com/user-attachments/assets/dd72a0f5-1ec0-4d84-8a7d-224a2cf2c07b" />
+
+
 # volunteerHive
 Career Center Volunteer Management System Project
 
@@ -5,10 +9,12 @@ VolunteerHive is a web-based Volunteer Management System (VMS) designed for the 
 
 Key Features:
 
-User Account Management
-Interactive Calendar 
-Event Registration Management 
-Event Administration
-Performance Portal 
-Networking Tab 
-Landing Page & Public Information 
+-User Account Management
+-Interactive Calendar 
+-Event Registration Management 
+-Event Administration
+-Performance Portal 
+-Networking Tab 
+-Landing Page & Public Information 
+
+
