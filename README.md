@@ -71,7 +71,7 @@ VolunteerHive is a web-based Volunteer Management System (VMS) designed for the 
 ### Installation
 
 1. Login with any CSUS.edu and get buzzing...
-   ```
+   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
