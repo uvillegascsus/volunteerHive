@@ -2,6 +2,14 @@
 <img width="200" height="175" alt="image" src="https://github.com/user-attachments/assets/dd72a0f5-1ec0-4d84-8a7d-224a2cf2c07b" />
 
 
+[![Contributors][contributors-shield]][]
+[![Forks][forks-shield]][]
+[![Stargazers][stars-shield]][]
+[![Issues][issues-shield]][]
+[![Unlicense License][license-shield]][]
+[![LinkedIn][linkedin-shield]][]
+
+
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 <!--
