@@ -75,8 +75,9 @@ LAMP( Linux, Apache, MySQL, Python)
 
 ### Installation
 
-1. Login with any CSUS.edu and get buzzing...
-   
+***Under Construction***
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,6 +86,7 @@ LAMP( Linux, Apache, MySQL, Python)
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+1. Login with any CSUS.edu and get buzzing...
 
 Key Features:
 
