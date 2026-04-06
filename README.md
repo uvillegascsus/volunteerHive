@@ -2,11 +2,6 @@
 <img width="200" height="175" alt="image" src="https://github.com/user-attachments/assets/dd72a0f5-1ec0-4d84-8a7d-224a2cf2c07b" />
 
 
-# volunteerHive
-Career Center Volunteer Management System Project
-
-VolunteerHive is a web-based Volunteer Management System (VMS) designed for the Sacramento State Career Center. The platform allows Sac State students to create accounts, view volunteer opportunities through an interactive calendar, register for events, track volunteer hours, and connect with other volunteers. The system aims to streamline volunteer coordination, reduce manual tracking, and increase student participation through a centralized digital platform.
-
 Key Features:
 
 -User Account Management
@@ -34,31 +29,6 @@ Key Features:
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][]
-[![Forks][]
-[![Stargazers][]][]
-[![Issues][issues-shield]][]
-[![Unlicense License][license-shield]][]
-[![LinkedIn][linkedin-shield]][]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-
-  </p>
-</div>
 
 
 
@@ -94,6 +64,7 @@ Key Features:
 ## About The Project
 
 
+VolunteerHive is a web-based Volunteer Management System (VMS) designed for the Sacramento State Career Center. The platform allows Sac State students to create accounts, view volunteer opportunities through an interactive calendar, register for events, track volunteer hours, and connect with other volunteers. The system aims to streamline volunteer coordination, reduce manual tracking, and increase student participation through a centralized digital platform.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
