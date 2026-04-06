@@ -1,5 +1,5 @@
 
-<img width="746" height="842" alt="image" src="https://github.com/user-attachments/assets/dd72a0f5-1ec0-4d84-8a7d-224a2cf2c07b" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/dd72a0f5-1ec0-4d84-8a7d-224a2cf2c07b" />
 
 
 # volunteerHive
