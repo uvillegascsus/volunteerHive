@@ -123,7 +123,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+BusyBees - [uvillegas@csus.edu]() - uvillegas@csus.edu
 
 Project Link: [https://github.com/uvillegascsus/volunteerHive](https://github.com/uvillegascsus/volunteerHive)
 
