@@ -67,8 +67,11 @@ LAMP( Linux, Apache, MySQL, Python)
 <!-- GETTING STARTED -->
 ## Getting Started
 
+***Under Construction***
+
 ### Prerequisites
 
+***Under Construction***
 
 ### Installation
 
