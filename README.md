@@ -10,11 +10,17 @@ VolunteerHive is a web-based Volunteer Management System (VMS) designed for the 
 Key Features:
 
 -User Account Management
+
 -Interactive Calendar 
+
 -Event Registration Management 
+
 -Event Administration
+
 -Performance Portal 
+
 -Networking Tab 
+
 -Landing Page & Public Information 
 
 
