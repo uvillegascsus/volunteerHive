@@ -144,9 +144,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ### Top contributors:
 
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,7 +164,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/uvillegascsus/volunteerHive](https://github.com/uvillegascsus/volunteerHive)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
