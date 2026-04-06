@@ -2,23 +2,6 @@
 <img width="200" height="175" alt="image" src="https://github.com/user-attachments/assets/dd72a0f5-1ec0-4d84-8a7d-224a2cf2c07b" />
 
 
-Key Features:
-
--User Account Management
-
--Interactive Calendar 
-
--Event Registration Management 
-
--Event Administration
-
--Performance Portal 
-
--Networking Tab 
-
--Landing Page & Public Information 
-
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 <!--
@@ -106,6 +89,22 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ## Usage
 
 
+
+Key Features:
+
+-User Account Management
+
+-Interactive Calendar 
+
+-Event Registration Management 
+
+-Event Administration
+
+-Performance Portal 
+
+-Networking Tab 
+
+-Landing Page & Public Information 
 
 
 
