@@ -7,6 +7,9 @@ const { AccountManager, User } = require('../models/Account');
 const PendingUser = require('../models/PendingUser');
 const { authMiddleware } = require('../middleware/auth');
 
+
+
+
 router.post('/forgot-password', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -39,3 +42,11 @@ router.post('/forgot-password', async (req, res) => {
   }
 });
 
+router.post('/reset-password/:token', async (req, res) => {
+  try {
+    await account.resetPassword(req.params.token, req.body.password);
+    res.json({ message: 'Password reset successful' });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
