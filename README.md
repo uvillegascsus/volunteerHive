@@ -71,7 +71,8 @@ LAMP( Linux, Apache, MySQL, Python)
 
 ### Prerequisites
 
-***Under Construction***
+Node.js v18+
+MongoDB running locally (mongod)
 
 ### Installation
 
