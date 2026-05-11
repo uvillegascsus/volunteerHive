@@ -1,3 +1,8 @@
+const express = require('express');
+const router = express.Router();
+const Registration = require('../models/Registration');
+const Event = require('../models/Event');
+const { authMiddleware, adminMiddleware } = require('../middleware/auth');
 // GET /api/registrations/my
 router.get('/my', authMiddleware, async (req, res) => {
   try {
