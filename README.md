@@ -57,7 +57,7 @@ VolunteerHive is a web-based Volunteer Management System (VMS) designed for the 
 
 ### Built With
 
-LAMP( Linux, Apache, MySQL, Python)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -67,11 +67,37 @@ LAMP( Linux, Apache, MySQL, Python)
 <!-- GETTING STARTED -->
 ## Getting Started
 
-***Under Construction***
+### 1. Clone the repo and switch to your branch
+```bash
+git clone <repo-url>
+cd Sprint1
+git checkout feature/scrum-XX   # replace XX with your ticket number
+```
+
+### 2. Set up the server
+```bash
+cd server
+cp .env.example .env
+# Edit .env and fill in your MongoDB URI and Gmail App Password
+npm install
+node server.js
+```
+
+### 3. Set up the client (in a new terminal)
+```bash
+cd client
+npm install
+npm run dev
+```
+
+### 4. Open the app
+Visit [http://localhost:5173](http://localhost:5173)
+
 
 ### Prerequisites
 
-***Under Construction***
+-Node.js v18+
+-MongoDB running locally (mongod)
 
 ### Installation
 

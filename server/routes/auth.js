@@ -10,6 +10,19 @@ const { authMiddleware } = require('../middleware/auth');
 
 
 
+router.post('/login', async (req, res) => {
+  try {
+    const user = await account.signIn(req.body.email, req.body.password);
+    const token = generateToken(user);
+    res.json({
+      token,
+      user: { id: user._id, firstName: user.firstName, lastName: user.lastName, email: user.email, role: user.role },
+    });
+  } catch (err) {
+    res.status(401).json({ message: err.message });
+  }
+});
+
 router.post('/forgot-password', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
