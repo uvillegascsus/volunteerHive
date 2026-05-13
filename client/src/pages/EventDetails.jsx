@@ -27,6 +27,14 @@ export default function EventDetails() {
     refresh().catch(() => navigate('/events')).finally(() => setLoading(false));
   }, [id, user, API]);
 
+
+
+
+
+const handleRegister = async () => {
+    if (!user) return navigate('/login'); 
+    setActionLoading(true); setError(''); setMessage('');
+  
 const handleCancel = async () => {
     if (!window.confirm('Cancel your registration for this event?')) return;
     setActionLoading(true); setError(''); setMessage('');
@@ -45,5 +53,9 @@ const handleCancel = async () => {
 
   const isPast = new Date() >= date;
   const isFull = event.spotsRemaining === 0;
+  
+  const isRegistered = myReg?.status === 'registered';
+  const isCompleted = myReg?.status === 'completed';
+  
 
 }
