@@ -23,7 +23,9 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
     //kayla
     
     // Ulises (SCRUM-28)
-
+    const existing = await Registration.findOne({ user: req.user.id, event: req.params.eventId }); // Ulises (SCRUM-28)
+    if (existing) return res.status(400).json({ message: 'Already registered for this event' }); // Ulises (SCRUM-28)
+    
     // Kayla (SCRUM-30)
     await event.save();
     res.status(201).json(reg);
