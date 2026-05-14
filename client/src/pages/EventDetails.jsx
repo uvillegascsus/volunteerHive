@@ -61,7 +61,7 @@ const handleCancel = async () => {
       setActionLoading(false);
     }
   };
-if (loading) return <div className="spinner" />;
+  if (loading) return <div className="spinner" />;
   if (!event) return null;
 
   const date = new Date(event.eventDate);
@@ -75,6 +75,15 @@ if (loading) return <div className="spinner" />;
   const isCompleted = myReg?.status === 'completed';
 
   //ANAHI 
+
+    const buttonState = () => {
+    if (!user) return { label: 'Sign In to Register', action: () => navigate('/login'), cls: 'btn-outline' };
+    if (isCompleted) return { label: '✅ Completed', action: null, cls: 'btn-success', disabled: true };
+    if (isRegistered) return { label: 'Cancel Registration', action: handleCancel, cls: 'btn-danger' };
+    if (isPast || event.status !== 'upcoming') return { label: 'Event Closed', action: null, cls: 'btn-outline', disabled: true };
+    if (isFull) return { label: 'Event Full', action: null, cls: 'btn-outline', disabled: true };
+    return { label: 'Sign Up', action: handleRegister, cls: 'btn-primary' };
+    };
 
     const btn = buttonState();
 
@@ -139,12 +148,4 @@ if (loading) return <div className="spinner" />;
     </div>
   );
 }
-
-}
-
-  const btn = buttonState();
-
-          <div>
-            <strong>Capacity</strong>
-            <p style={{ color: 'var(--text-muted)', marginTop: 2 }}>👥 {event.spotsRemaining} / {event.volunteerLimit} spots remaining</p>
-          </div>      
+  
