@@ -20,13 +20,14 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
     const event = await Event.findById(req.params.eventId);
     if (!event) return res.status(404).json({ message: 'Event not found' });
     if (event.spotsRemaining <= 0) return res.status(400).json({ message: 'Event is full' });
-    //kayla
+    //rob
     
     // Ulises (SCRUM-28)
     const existing = await Registration.findOne({ user: req.user.id, event: req.params.eventId }); // Ulises (SCRUM-28)
     if (existing) return res.status(400).json({ message: 'Already registered for this event' }); // Ulises (SCRUM-28)
     
-    // Kayla (SCRUM-30)
+    const reg = await Registration.create({ user: req.user.id, event: req.params.eventId });
+    event.spotsRemaining -= 1;
     await event.save();
     res.status(201).json(reg);
   } catch (err) {
@@ -45,8 +46,7 @@ router.delete('/:eventId', authMiddleware, async (req, res) => {
     const reg = await Registration.findOneAndDelete({ user: req.user.id, event: req.params.eventId });
     if (!reg) return res.status(404).json({ message: 'Registration not found' });
 
-//kayla 
-    
+    event.spotsRemaining += 1;
     await event.save();
     res.json({ message: 'Registration cancelled' });
   } catch (err) {
