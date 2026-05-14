@@ -69,3 +69,10 @@ const handleCancel = async () => {
   
 
 }
+
+  const btn = buttonState();
+
+          <div>
+            <strong>Capacity</strong>
+            <p style={{ color: 'var(--text-muted)', marginTop: 2 }}>👥 {event.spotsRemaining} / {event.volunteerLimit} spots remaining</p>
+          </div>      
