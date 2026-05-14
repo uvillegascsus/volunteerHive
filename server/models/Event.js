@@ -19,8 +19,8 @@ const eventSchema = new mongoose.Schema(
       type: String,
       enum: ['upcoming', 'ongoing', 'completed', 'postponed', 'cancelled'],
       default: 'upcoming',
-    };
-  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    },
+   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   },
     { timestamps: true }
   );
