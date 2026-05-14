@@ -22,11 +22,12 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
     if (event.spotsRemaining <= 0) return res.status(400).json({ message: 'Event is full' });
     //rob
     
-
+    // Ulises (SCRUM-28)
     const existing = await Registration.findOne({ user: req.user.id, event: req.params.eventId }); // Ulises (SCRUM-28)
     if (existing) return res.status(400).json({ message: 'Already registered for this event' }); // Ulises (SCRUM-28)
     
- 
+    const reg = await Registration.create({ user: req.user.id, event: req.params.eventId });
+    event.spotsRemaining -= 1;
     await event.save();
     res.status(201).json(reg);
   } catch (err) {
