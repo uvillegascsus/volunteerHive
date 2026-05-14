@@ -120,6 +120,10 @@ if (loading) return <div className="spinner" />;
         )}
 
         //ANAHI 
+        
+         <button className={`btn ${btn.cls}`} onClick={btn.action} disabled={btn.disabled || actionLoading} style={{ width: '100%', padding: '12px' }}>
+          {actionLoading ? 'Processing...' : btn.label}
+        </button>
 
          </div>
     </div>
