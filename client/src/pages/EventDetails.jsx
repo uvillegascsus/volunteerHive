@@ -34,6 +34,16 @@ export default function EventDetails() {
 const handleRegister = async () => {
     if (!user) return navigate('/login'); 
     setActionLoading(true); setError(''); setMessage('');
+    try {
+      await axios.post(`${API}/registrations/${id}`);
+      setMessage('Successfully registered!');
+      await refresh();
+    } catch (err) {
+      setError(err.response?.data?.message || 'Registration failed');
+    } finally {
+      setActionLoading(false);
+    }
+  };
   
 const handleCancel = async () => {
     if (!window.confirm('Cancel your registration for this event?')) return;
