@@ -111,12 +111,10 @@ const handleCancel = async () => {
           <div><strong>Date</strong><p style={{ color: 'var(--text-muted)', marginTop: 2 }}>📅 {formatted}</p></div>
           <div><strong>Time</strong><p style={{ color: 'var(--text-muted)', marginTop: 2 }}>🕐 {event.eventTime}</p></div>
           <div><strong>Location</strong><p style={{ color: 'var(--text-muted)', marginTop: 2 }}>📍 {event.location}</p></div>
-          {/* === Kayla starts here (SCRUM-30: display spots remaining / volunteer count) === */}
           <div>
             <strong>Capacity</strong>
             <p style={{ color: 'var(--text-muted)', marginTop: 2 }}>👥 {event.spotsRemaining} / {event.volunteerLimit} spots remaining</p>
           </div>
-          {/* === Kayla ends here === */}
           {event.category && <div><strong>Category</strong><p style={{ color: 'var(--text-muted)', marginTop: 2 }}>🏷️ {event.category}</p></div>}
           <div>
             <strong>Posted by</strong>
