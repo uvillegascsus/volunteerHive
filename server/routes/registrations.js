@@ -19,7 +19,7 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
   try {
     const event = await Event.findById(req.params.eventId);
     if (!event) return res.status(404).json({ message: 'Event not found' });
-    //kayla
+    if (event.spotsRemaining <= 0) return res.status(400).json({ message: 'Event is full' });
     //kayla
     
     // Ulises (SCRUM-28)
