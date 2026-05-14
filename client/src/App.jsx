@@ -9,6 +9,11 @@ import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Profile from './pages/Profile';
 
+import Events from './pages/Events';
+import EventDetails from './pages/EventDetails';
+import MyEvents from './pages/MyEvents';
+import AdminDashboard from './pages/AdminDashboard';
+
 function Layout({ children }) {
   return (
     <>
@@ -27,6 +32,10 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/events" element={<Layout><Events /></Layout>} />
+          <Route path="/events/:id" element={<Layout><EventDetails /></Layout>} />
+          <Route path="/my-events" element={<ProtectedRoute><Layout><MyEvents /></Layout></ProtectedRoute>} />
+          <Route path="/admin" element={<ProtectedRoute adminOnly><Layout><AdminDashboard /></Layout></ProtectedRoute>} />
           <Route
             path="/profile"
             element={<ProtectedRoute><Layout><Profile /></Layout></ProtectedRoute>}
