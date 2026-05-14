@@ -13,6 +13,8 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/registrations', require('./routes/registrations'));
+app.use('/api/events', require('./routes/events'));
+app.use('/api/registrations', require('./routes/registrations'));
 
 mongoose
     .connect(process.env.MONGO_URI)

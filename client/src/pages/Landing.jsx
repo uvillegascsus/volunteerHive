@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import beesImg from '../assets/bees.png';
 import photo1 from '../assets/photo1.png';
@@ -6,8 +6,7 @@ import photo2 from '../assets/photo2.png';
 import photo3 from '../assets/photo3.png';
 
 export default function Landing() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
+  const { user } = useAuth();
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--white)' }}>
@@ -20,10 +19,7 @@ export default function Landing() {
         </div>
         <div style={{ display: 'flex', gap: 10 }}>
           {user ? (
-            <>
-              <Link to="/profile" className="btn btn-outline btn-sm">👤 {user.firstName}</Link>
-              <button className="btn btn-primary btn-sm" onClick={() => { logout(); navigate('/'); }}>Sign Out</button>
-            </>
+            <Link to="/events" className="btn btn-primary btn-sm">Browse Events</Link>
           ) : (
             <>
               <Link to="/login" className="btn btn-outline btn-sm">Sign In</Link>
@@ -101,3 +97,4 @@ export default function Landing() {
     </div>
   );
 }
+

@@ -32,6 +32,9 @@ export default function Navbar() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           {user ? (
             <>
+              <Link to="/events" style={navLinkStyle('/events')}>Events</Link>
+              <Link to="/my-events" style={navLinkStyle('/my-events')}>My Events</Link>
+              {user.role === 'admin' && <Link to="/admin" style={navLinkStyle('/admin')}>Admin</Link>}
               <Link to="/profile" style={navLinkStyle('/profile')}>👤 {user.firstName}</Link>
               <button onClick={handleLogout} className="btn btn-outline btn-sm" style={{ marginLeft: 4 }}>
                 Sign Out
