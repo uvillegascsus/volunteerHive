@@ -24,7 +24,10 @@ const eventSchema = new mongoose.Schema(
   },
     { timestamps: true }
   );
-  //KALYA
+  eventSchema.pre('save', function (next) {
+  if (this.isNew) this.spotsRemaining = this.volunteerLimit;
+  next();
+});
 module.exports = mongoose.model('Event', eventSchema);
     
     
