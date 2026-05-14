@@ -34,6 +34,7 @@ export default function EventDetails() {
 const handleRegister = async () => {
     if (!user) return navigate('/login'); 
     setActionLoading(true); setError(''); setMessage('');
+}
   
 const handleCancel = async () => {
     if (!window.confirm('Cancel your registration for this event?')) return;
@@ -56,6 +57,26 @@ const handleCancel = async () => {
   
   const isRegistered = myReg?.status === 'registered';
   const isCompleted = myReg?.status === 'completed';
+
+  const buttonState = () => {
+    if (!user) return { label: 'Sign In to Register', action: () => navigate('/login'), cls: 'btn-outline' };
+    if (isCompleted) return { label: '✅ Completed', action: null, cls: 'btn-success', disabled: true };
+    if (isRegistered) return { label: 'Cancel Registration', action: handleCancel, cls: 'btn-danger' };
+    if (isPast || event.status !== 'upcoming') return { label: 'Event Closed', action: null, cls: 'btn-outline', disabled: true };
+    if (isFull) return { label: 'Event Full', action: null, cls: 'btn-outline', disabled: true };
+    return { label: 'Sign Up', action: handleRegister, cls: 'btn-primary' };
+  };
+  
+
+  {
+    <button className={`btn ${btn.cls}`} onClick={btn.action} disabled={btn.disabled || actionLoading} style={{ width: '100%', padding: '12px' }}>
+          {actionLoading ? 'Processing...' : btn.label}
+        </button>
+  }
+
+
+
   
 
 }
+
