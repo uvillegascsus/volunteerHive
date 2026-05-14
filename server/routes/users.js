@@ -5,6 +5,7 @@ const { authMiddleware } = require('../middleware/auth');
 
 const account = AccountManager.getInstance();
 
+// PUT /api/users/profile
 router.put('/profile', authMiddleware, async (req, res) => {
   try {
     const { firstName, lastName, displayName, graduationYear, major, skills, contactInfo } = req.body;
@@ -17,6 +18,7 @@ router.put('/profile', authMiddleware, async (req, res) => {
   }
 });
 
+// PUT /api/users/change-password
 router.put('/change-password', authMiddleware, async (req, res) => {
   try {
     const { currentPassword, newPassword } = req.body;
