@@ -20,6 +20,7 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
     const event = await Event.findById(req.params.eventId);
     if (!event) return res.status(404).json({ message: 'Event not found' });
     if (event.spotsRemaining <= 0) return res.status(400).json({ message: 'Event is full' });
+    if (event.status !== 'uncoming') return res.status(400).json({message: 'Event is not open for registration'});
     //rob
     
 
