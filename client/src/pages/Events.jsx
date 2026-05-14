@@ -28,9 +28,10 @@ function EventCard({ event }) {
       <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: 4 }}>
         <span>📅 {formatted} at {event.eventTime}</span>
         <span>📍 {event.location}</span>
-        {/* === Kayla starts here (SCRUM-30: display current volunteer count per event) === */}
+
         <span>👥 {event.spotsRemaining} / {event.volunteerLimit} spots remaining</span>
-        {/* === Kayla ends here === */}
+
+        <span>👥 {event.spotsRemaining} / {event.volunteerLimit} spots remaining</span>
         {event.category && <span>🏷️ {event.category}</span>}
       </div>
       <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>

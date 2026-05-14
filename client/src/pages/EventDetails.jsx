@@ -35,7 +35,17 @@ const handleRegister = async () => {
     if (!user) return navigate('/login'); 
     setActionLoading(true); setError(''); setMessage('');
 
-  //Kayla
+
+    try {
+      await axios.post(`${API}/registrations/${id}`);
+      setMessage('Successfully registered!');
+      await refresh();
+    } catch (err) {
+      setError(err.response?.data?.message || 'Registration failed');
+    } finally {
+      setActionLoading(false);
+    }
+  };
   
 const handleCancel = async () => {
     if (!window.confirm('Cancel your registration for this event?')) return;
@@ -127,3 +137,10 @@ if (loading) return <div className="spinner" />;
 }
 
 }
+
+  const btn = buttonState();
+
+          <div>
+            <strong>Capacity</strong>
+            <p style={{ color: 'var(--text-muted)', marginTop: 2 }}>👥 {event.spotsRemaining} / {event.volunteerLimit} spots remaining</p>
+          </div>      
