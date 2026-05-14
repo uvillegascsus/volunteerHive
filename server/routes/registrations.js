@@ -1,3 +1,8 @@
+const express = require('express');
+const router = express.Router();
+const Registration = require('../models/Registration');
+const Event = require('../models/Event');
+const { authMiddleware, adminMiddleware } = require('../middleware/auth');
 // GET /api/registrations/my
 router.get('/my', authMiddleware, async (req, res) => {
   try {
@@ -18,7 +23,9 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
     //kayla
     
     // Ulises (SCRUM-28)
-
+    const existing = await Registration.findOne({ user: req.user.id, event: req.params.eventId }); // Ulises (SCRUM-28)
+    if (existing) return res.status(400).json({ message: 'Already registered for this event' }); // Ulises (SCRUM-28)
+    
     // Kayla (SCRUM-30)
     await event.save();
     res.status(201).json(reg);
