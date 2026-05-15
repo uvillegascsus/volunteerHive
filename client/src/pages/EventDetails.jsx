@@ -135,8 +135,6 @@ const handleCancel = async () => {
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, marginTop: 8 }}>{event.requirements}</p>
           </div>
         )}
-
-        //ANAHI 
         
          <button className={`btn ${btn.cls}`} onClick={btn.action} disabled={btn.disabled || actionLoading} style={{ width: '100%', padding: '12px' }}>
           {actionLoading ? 'Processing...' : btn.label}
