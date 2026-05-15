@@ -14,6 +14,17 @@ router.get('/my', authMiddleware, async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+// GET /api/registrations/event/:eventId - admin only
+router.get('/event/:eventId', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const regs = await Registration.find({ event: req.params.eventId }).populate('user', '-password');
+    res.json(regs);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 // POST /api/registrations/:eventId
 router.post('/:eventId', authMiddleware, async (req, res) => {
   try {
