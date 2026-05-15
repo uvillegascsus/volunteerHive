@@ -20,10 +20,8 @@ router.post('/:eventId', authMiddleware, async (req, res) => {
     const event = await Event.findById(req.params.eventId);
     if (!event) return res.status(404).json({ message: 'Event not found' });
     if (event.spotsRemaining <= 0) return res.status(400).json({ message: 'Event is full' });
-    if (event.status !== 'uncoming') return res.status(400).json({message: 'Event is not open for registration'});
-    //rob
-    
-    // Ulises (SCRUM-28)
+    if (event.status !== 'upcoming') return res.status(400).json({message: 'Event is not open for registration'});
+
     const existing = await Registration.findOne({ user: req.user.id, event: req.params.eventId }); // Ulises (SCRUM-28)
     if (existing) return res.status(400).json({ message: 'Already registered for this event' }); // Ulises (SCRUM-28)
     
